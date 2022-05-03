@@ -1,5 +1,5 @@
 <?php
-
+require_once "recaptchalib.php";
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -56,7 +56,7 @@ body {
 }
 
 #central {
-    max-width: 320px;
+    max-width: 350px;
     width: 100%;
 }
 
@@ -242,6 +242,8 @@ body {
     background: #03A9F4;
 }
 
+
+
 </style>
 <html lang="es">
 
@@ -259,21 +261,15 @@ body {
 
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
     <!-- Link hacia el archivo de estilos css -->
-   
-
-    <style type="text/css">
-
-    </style>
 
     <script type="text/javascript">
         <body class="d-flex flex-column " >
 
     </script>
 </head>
-
-<script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
 <body>
 
     <div id="contenedor">
@@ -290,7 +286,7 @@ body {
                 </div>
                 <div class="custom-select">
                     <label for="cat_oficinas" class="text-right">Oficina</label>
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <select class="form-select form-select-lg mb-3 width-100" aria-label="form-select-lg example">
                     <option value="">Seleccione la oficina</option>
                         <?php
                         while ($dataSelect = mysqli_fetch_array($datacat_oficinasSelect)) { ?>
@@ -302,7 +298,7 @@ body {
                 </div>
                 <div class="custom-select">
                     <label for="cat_status_anio" class="text-right">Periodo</label>
-                    <select class="form-control form-control-sm">
+                    <select class="form-select form-select-lg mb-3 width-100">
                         <option value="">Seleccione el periodo</option>
 
                         <?php
@@ -317,7 +313,7 @@ body {
 
                 <div class="custom-select">
                     <label for="cat_etapa" class="text-right">Etapa</label>
-                    <select class="form-control form-control-sm">
+                    <select class="form-select form-select-lg mb-3 width-100">
                         <option value="">Seleccione la etapa
                         </option>
 
@@ -332,6 +328,8 @@ body {
              
                 </div>
            
+
+                <!-- is this necessary??
                 <form class="form-signin" action="validacion.php" method="POST">
                 <br>
                 <span id="reauth-email" class="reauth-email"></span>
@@ -342,9 +340,13 @@ body {
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
-                     -->
-                </div>
+                     
+                </div>  -->
+                
+                </br></br><div class="g-recaptcha" data-sitekey="6LfB4LwfAAAAAKOuCqL-8Wl4t9N2-ONgzHSXre27"></div>
+
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
+
 
            
             </form><!-- /form -->

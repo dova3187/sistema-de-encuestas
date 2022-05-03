@@ -1,5 +1,6 @@
 <?php
   session_start();   // Necesitamos una sesion
+  require_once "recaptchalib.php";
   if(isset($SESSION['u_usuario'])){  // comparamos si existe
     header("Location: validacion.php"); // si existe, lo redireccionamos a sesion.php
   }
@@ -185,13 +186,9 @@ body, html {
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
-
-
- 
-
+  <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
   <title>Sistema de encuestas</title>
 </head>
 <body>
@@ -254,6 +251,9 @@ body, html {
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
 
                 <a type="button" class="btn btn-lg btn-primary btn-block btn-signin" href="index2.php" role="button" >Invitado</a>
+
+            
+                </br><div class="g-recaptcha" data-sitekey="6LfB4LwfAAAAAKOuCqL-8Wl4t9N2-ONgzHSXre27"></div>
                 <!--
                   <input type="submit" name="" value="Ingresar">
                 -->
