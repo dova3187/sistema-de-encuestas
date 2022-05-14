@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "php";
+$password = "password";
 $dbname = "sistema_encuestas";
 
 // Creamos la conexión
