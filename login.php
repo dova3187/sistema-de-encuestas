@@ -245,12 +245,13 @@ body, html {
                     </label>
                      -->
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
+                <div class="g-recaptcha" data-sitekey="6LfB4LwfAAAAAKOuCqL-8Wl4t9N2-ONgzHSXre27"></div>
+                </br><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
 
                 <a type="button" class="btn btn-lg btn-primary btn-block btn-signin" href="index2.php" role="button" >Invitado</a>
 
 
-                </br><div class="g-recaptcha" data-sitekey="6LfB4LwfAAAAAKOuCqL-8Wl4t9N2-ONgzHSXre27"></div>
+                
                 <!--
                   <input type="submit" name="" value="Ingresar">
                 -->
