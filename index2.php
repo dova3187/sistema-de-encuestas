@@ -1,8 +1,8 @@
 <?php
 require_once "recaptchalib.php";
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "php";
+$password = "password";
 $dbname = "sistema_encuestas";
 
 // Creamos la conexión
@@ -241,9 +241,58 @@ body {
 .custom-select .selector-options li:hover {
     background: #03A9F4;
 }
+a.button {
+font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color: #1b262c;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    background-color: #7F9174;
+    margin-top: 10px;
+    text-decoration:none
+}
+a.button:hover {
+    background-color: #0f4c75;
+    color:#bbe1fa;
+}
 
-
-
+.button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
 </style>
 <html lang="es">
 
@@ -261,6 +310,7 @@ body {
 
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
     <!-- Link hacia el archivo de estilos css -->
@@ -276,17 +326,17 @@ body {
         <div id="central">
             <div id="login">
                 <div>
-                    <img src="imagenes/LogPoderJ.png" height="80 px" width="270 px">
+                    <img src="imagenes/LogPoderJ.png" height="80" width="270">
                 </div>
                 <div class="titulo">Bienvenido</div>
-
+            <form action="encuesta.php" method="post">
                 <div class="loginform">
                     <label class="text-right" for="text">Número de Encuesta</label>
-                    <input id="text" type="text" class="form-control form-control-sm" name="ticket" value="" required autofocus>
+                    <input id="text" type="text" class="form-control form-control-sm" name="numero_encuesta" value="" required autofocus>
                 </div>
                 <div class="custom-select">
                     <label for="cat_oficinas" class="text-right">Oficina</label>
-                    <select class="form-select form-select-lg mb-3 width-100" aria-label="form-select-lg example">
+                    <select class="form-select form-select-lg mb-3 width-100" aria-label="form-select-lg example" name="oficina">
                     <option value="">Seleccione la oficina</option>
                         <?php
                         while ($dataSelect = mysqli_fetch_array($datacat_oficinasSelect)) { ?>
@@ -298,7 +348,7 @@ body {
                 </div>
                 <div class="custom-select">
                     <label for="cat_status_anio" class="text-right">Periodo</label>
-                    <select class="form-select form-select-lg mb-3 width-100">
+                    <select class="form-select form-select-lg mb-3 width-100" name="periodo">
                         <option value="">Seleccione el periodo</option>
 
                         <?php
@@ -313,7 +363,7 @@ body {
 
                 <div class="custom-select">
                     <label for="cat_etapa" class="text-right">Etapa</label>
-                    <select class="form-select form-select-lg mb-3 width-100">
+                    <select class="form-select form-select-lg mb-3 width-100" name="etapa">
                         <option value="">Seleccione la etapa
                         </option>
 
@@ -345,10 +395,10 @@ body {
                 
                 </br></br><div class="g-recaptcha" data-sitekey="6LfB4LwfAAAAAKOuCqL-8Wl4t9N2-ONgzHSXre27"></div>
 
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar</button>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Ingresar como invitado</button>
 
+                <a type="button" class="login button" href="login.php">Tengo una cuenta</a>
 
-           
             </form><!-- /form -->
             </div>
         </div>

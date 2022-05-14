@@ -228,14 +228,11 @@ body, html {
       </div>
     </nav>
 
-
-
     <!--LOGIN-->
 
      <div class="container "  >
-        <div class="card card-container" >
-
-            <img id="profile-img" class="profile-img-card" src="imagenes/LogPoderJ.png" height="580 px" width="270 px" />
+        <div class="card card-container">
+            <img src="imagenes/LogPoderJ.png" height="80">
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" action="validacion.php" method="POST">
                 <span id="reauth-email" class="reauth-email"></span>
@@ -252,7 +249,7 @@ body, html {
 
                 <a type="button" class="btn btn-lg btn-primary btn-block btn-signin" href="index2.php" role="button" >Invitado</a>
 
-            
+
                 </br><div class="g-recaptcha" data-sitekey="6LfB4LwfAAAAAKOuCqL-8Wl4t9N2-ONgzHSXre27"></div>
                 <!--
                   <input type="submit" name="" value="Ingresar">
