@@ -106,10 +106,31 @@
 		 ?>
 
 		<input type="hidden" class="tamaño" value="<?php echo $opciones ?>">
-
+		<?php if ($opciones != 0){ ?>
 		<div class="container" style="width: 50%; margin: 0 auto; width: 400px;">		
 			<canvas class="oilChart" width="600" height="400"></canvas>
 		</div>
+		<?php }else{
+
+			$answer_by_txt = "SELECT respuesta_texto, COUNT(respuesta_texto) as total FROM resultados GROUP BY respuesta_texto HAVING respuesta_texto is not null";
+			$results = $con->query($answer_by_txt);
+		
+			echo "<table class='table'>";
+			echo "<thead class='thead-dark'>
+					    <tr>
+					      <th scope='col'>Respuesta</th>
+					      <th scope='col'>Total</th>
+					    </tr></thead><tbody>";
+			while($row_value = $results->fetch_assoc()){
+				echo "<tr>";
+					echo "<td>".$row_value['respuesta_texto']."</td>";
+					echo "<td>".$row_value['total']."</td>";
+				echo "</tr>";
+
+			}
+			echo "</tbody></table>";
+		 } ?>
+
 
 		<script src="js/Chart.min.js"></script>
 
