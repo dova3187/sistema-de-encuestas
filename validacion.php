@@ -1,7 +1,33 @@
-<?php 	
+<?php 	session_start(); ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-session_start();
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
+  <link rel="stylesheet" href="css/styles.css">
+
+
+  <title>Responder</title>
+
+</head>
+<body>
+  
+ 	<div class="container text-center card" style="background-color:#557982; margin-top:200px;">
+    <div>
+        <img src="imagenes/LogPoderJ.png" height="80" width="270" style="margin-top:50px;">
+    </div>
+ 		<hr /> 
+ 		<h1><?php echo $row3['titulo'] ?></h1>
+ 		<p><?php echo $row3['descripcion'] ?></p>
+
+
+ 		<hr />
+<?php
  require_once "recaptchalib.php";   
  $secret = "6LfB4LwfAAAAAIfGullid923Kt6ahI_r8qmQ2Il-";
  $response = null;
@@ -42,11 +68,20 @@ session_start();
 				header("Location: index.php");
 			}
   } else {
-    // Añade aquí el código que desees en el caso de que la validación no sea correcta o muestra
-	if (!$query) {
-	    printf("Error: %s\n", mysqli_error($conn));
+	    echo "¡Validación incorrecta, verifica la casilla del capcha!";
 	    exit();
-	}
   }
-
  ?>
+		
+
+
+		<a href="index.php" class="btn btn-primary">Regresar</a>
+ 	</div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

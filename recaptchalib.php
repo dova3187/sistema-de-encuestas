@@ -33,6 +33,7 @@
 /**
  * A ReCaptchaResponse is returned from checkAnswer().
  */
+ini_set('display_errors', 0);
 class ReCaptchaResponse
 {
     public $success;
