@@ -3,7 +3,7 @@
   date_default_timezone_set("America/Lima");
   $date = new DateTime();
 
-  $fecha_inicio =000;
+  $fecha_inicio = $date->format('d-m-Y');
   
  ?>
 
