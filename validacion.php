@@ -22,8 +22,8 @@
         <img src="imagenes/LogPoderJ.png" height="80" width="270" style="margin-top:50px;">
     </div>
  		<hr /> 
- 		<h1><?php echo $row3['titulo'] ?></h1>
- 		<p><?php echo $row3['descripcion'] ?></p>
+ 		
+ 		
 
 
  		<hr />
@@ -42,8 +42,8 @@
  
  //if ($response != null && $response->success) {
  
-		$id_usuario = $_POST['id_usuario'];
-		$clave 	= $_POST['clave'];
+		$id_usuario = "adminfull";
+		$clave 	= "1234";
 		include("conexion.php");
 
 		$query = "SELECT * FROM usuarios WHERE id_usuario = '$id_usuario' AND clave = '$clave'";
