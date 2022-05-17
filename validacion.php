@@ -42,7 +42,7 @@
  
  //if ($response != null && $response->success) {
  
-		$id_usuario = "adminfull";
+		$id_usuario = "admifull";
 		$clave 	= "1234";
 		include("conexion.php");
 
