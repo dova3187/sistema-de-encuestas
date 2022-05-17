@@ -30,7 +30,8 @@
      );
   }
  
- if ($response != null && $response->success) {	
+ //if ($response != null && $response->success) {	
+ 	if (1 == 1) {
 		$_SESSION['numero_encuesta'] = $_POST['numero_encuesta'];
 		$_SESSION['oficina'] 	= $_POST['oficina'];
 		$_SESSION['periodo'] 	= $_POST['periodo'];

@@ -40,7 +40,8 @@
      );
   }
  
- if ($response != null && $response->success) {
+ //if ($response != null && $response->success) {
+ 
 		$id_usuario = $_POST['id_usuario'];
 		$clave 	= $_POST['clave'];
 		include("conexion.php");
@@ -67,10 +68,10 @@
 			} else {
 				header("Location: index.php");
 			}
-  } else {
-	    echo "¡Validación incorrecta, verifica la casilla del capcha!";
-	    exit();
-  }
+  //} else {
+  //	    echo "¡Validación incorrecta, verifica la casilla del capcha!";
+//	    exit();
+  //}
  ?>
 		
 
