@@ -77,7 +77,7 @@
 	        	<div class="col-md-10 col-xs-12">
 
             
-	        	 <a href="index.php" > <img src="../imagenes/1_banner.png"  width="300" height="300" ></a>
+	        	 <a href="../dashboard/encuestas/index.php" > <img src="../imagenes/1_banner.png"  width="300" height="300" ></a>
                 <br><br><br>
                  <h3 style="padding-left: 50px" > Configuracion</h3>
            
