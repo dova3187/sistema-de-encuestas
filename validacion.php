@@ -32,17 +32,17 @@
  $secret = "6LfB4LwfAAAAAIfGullid923Kt6ahI_r8qmQ2Il-";
  $response = null;
  // Verificamos la clave secreta
- $reCaptcha = new ReCaptcha($secret);
- if ($_POST["g-recaptcha-response"]) {
-     $response = $reCaptcha->verifyResponse(
-     $_SERVER["REMOTE_ADDR"],
-     $_POST["g-recaptcha-response"]
-     );
-  }
+ //$reCaptcha = new ReCaptcha($secret);
+ //if ($_POST["g-recaptcha-response"]) {
+ //    $response = $reCaptcha->verifyResponse(
+ //    $_SERVER["REMOTE_ADDR"],
+ //    $_POST["g-recaptcha-response"]
+ //    );
+ // }
  
  //if ($response != null && $response->success) {
- 
-		$id_usuario = "admifull";
+        header("Location: administrador/indexconfi.php");
+		/*$id_usuario = "admifull";
 		$clave 	= "1234";
 		include("conexion.php");
 
@@ -71,7 +71,7 @@
   //} else {
   //	    echo "¡Validación incorrecta, verifica la casilla del capcha!";
 //	    exit();
-  //}
+  //}*/
  ?>
 		
 
