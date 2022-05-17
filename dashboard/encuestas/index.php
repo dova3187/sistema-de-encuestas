@@ -56,6 +56,7 @@
 				<div class="row">
 				    <div class="col-12">
 				        <a class="btn btn-success my-2" href="form.php">Agregar nuevo</a>
+				        <a class="btn btn-warning my-2" href="../../administrador/indexconfi.php">Menú principal</a>
 				        <table class="table">
 				            <thead>
 				                <tr>

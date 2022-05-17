@@ -22,8 +22,8 @@
         <img src="imagenes/LogPoderJ.png" height="80" width="270" style="margin-top:50px;">
     </div>
  		<hr /> 
- 		
- 		
+ 		<h1><?php echo $row3['titulo'] ?></h1>
+ 		<p><?php echo $row3['descripcion'] ?></p>
 
 
  		<hr />
@@ -32,18 +32,18 @@
  $secret = "6LfB4LwfAAAAAIfGullid923Kt6ahI_r8qmQ2Il-";
  $response = null;
  // Verificamos la clave secreta
- //$reCaptcha = new ReCaptcha($secret);
- //if ($_POST["g-recaptcha-response"]) {
- //    $response = $reCaptcha->verifyResponse(
- //    $_SERVER["REMOTE_ADDR"],
- //    $_POST["g-recaptcha-response"]
- //    );
- // }
+ $reCaptcha = new ReCaptcha($secret);
+ if ($_POST["g-recaptcha-response"]) {
+     $response = $reCaptcha->verifyResponse(
+     $_SERVER["REMOTE_ADDR"],
+     $_POST["g-recaptcha-response"]
+     );
+  }
  
  //if ($response != null && $response->success) {
-        header("Location: administrador/indexconfi.php");
-		/*$id_usuario = "admifull";
-		$clave 	= "1234";
+ 
+		$id_usuario = $_POST['id_usuario'];
+		$clave 	= $_POST['clave'];
 		include("conexion.php");
 
 		$query = "SELECT * FROM usuarios WHERE id_usuario = '$id_usuario' AND clave = '$clave'";
@@ -71,7 +71,7 @@
   //} else {
   //	    echo "¡Validación incorrecta, verifica la casilla del capcha!";
 //	    exit();
-  //}*/
+  //}
  ?>
 		
 
