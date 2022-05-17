@@ -30,15 +30,15 @@
 
 		  	</br><h4>Configuración</h4>
 	        <ul class="list-unstyled components mb-5">
-	          <li>
-	              <a href="#">Encuestas</a>
-	          </li>
-	          <li class="active">
-              <a href="#">Preguntas</a>
-	          </li>
-	          <li>
-              <a href="#">Respuestas</a>
-	          </li>
+              <li>
+                  <a href="../encuestas/">Encuestas</a>
+              </li>
+              <li class="active">
+              <a href="../preguntas/">Preguntas</a>
+              </li>
+              <li>
+              <a href="../respuestas/">Respuestas</a>
+              </li>
 	        </ul>
 
 	        <div class="footer">

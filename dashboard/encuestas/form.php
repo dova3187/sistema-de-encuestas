@@ -26,13 +26,13 @@
             </br><h4>Configuración</h4>
             <ul class="list-unstyled components mb-5">
               <li class="active">
-                  <a href="#">Encuestas</a>
+                  <a href="../encuestas/">Encuestas</a>
               </li>
               <li>
-              <a href="#">Preguntas</a>
+              <a href="../preguntas/">Preguntas</a>
               </li>
               <li>
-              <a href="#">Respuestas</a>
+              <a href="../respuestas/">Respuestas</a>
               </li>
             </ul>
 
