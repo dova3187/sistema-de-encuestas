@@ -71,7 +71,7 @@
   </nav>
 
 	<!-- Content Section -->
-	<div class="container" style="margin-top: 30px; margin-left:50px">
+	<div class="container" style="margin-top: 30px">
 	    <div class="row">
 	        <div class="col-md-12 row">
 	        	<div class="col-md-10 col-xs-12">
