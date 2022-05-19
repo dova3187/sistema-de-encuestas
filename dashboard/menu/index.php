@@ -50,7 +50,7 @@
                 <h3>Configuración</h3>
               </div>
               <div class="col-4 center-txt">
-                <a  href="resultadosconfi.php" > 
+                <a  href="../../administrador/resultadosconfi.php" > 
                   <img  src="../images/2_banner.png" class="image"> 
                 </a>
                 <h3>Resultados</h3>
