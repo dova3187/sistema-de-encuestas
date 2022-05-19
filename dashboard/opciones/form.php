@@ -9,8 +9,6 @@
         
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    
-    
   </head>
   <body>
     <?php
@@ -68,29 +66,22 @@
         <div class="row">
             <div class="col-12">
                 <form action="save.php" method="POST">
-
                     <div class="form-group">
                           <label for="nombre">Pregunta</label></br>
                           <input placeholder="" class="form-control" type="text" value="<?php echo $pregunta[0]['titulo']?>"readonly>
                           <input type="hidden" name="id_pregunta" value="<?php echo $id_pregunta?>">
-                          
-
                     </div>
                     <div class="form-group">
                         <label for="nombre">Valor</label>
                         <input placeholder="Valor" class="form-control" type="text" name="valor" id="valor" required>
                     </div>
-
                     <div class="form-group">
                         <button class="btn btn-success">Guardar</button> 
-                        <button class="btn btn-danger" onclick="history.back()">Cancelar</button>
+                        <a class="btn btn-danger" href="../preguntas/index.php">Cancelar</a>
                     </div>
-
                 </form>
             </div>
         </div>
-
-
         <h2 class="mb-4">Opciones creadas</h2>
         <div class="row">
             <div class="col-12">
@@ -101,8 +92,6 @@
                         <tr>
                             <th>ID</th>
                             <th>Valor</th>
-                            
-                            
                             <th colspan="2">Acciones</th>
                         </tr>
                     </thead>
@@ -112,10 +101,6 @@
                             <tr>
                                 <td><?php echo $opcion["id_opcion"] ?></td>
                                 <td><?php echo $opcion["valor"] ?></td>
-                                
-                                
-                                
-                                
                                 <td>
                                     <a href="edit.php?id=<?php echo $opcion["id_opcion"] ?>&id_pregunta=<?php echo $id_pregunta?>">Editar</a>
                                 </td>
@@ -128,49 +113,13 @@
                 </table>
             </div>
         </div>
-
-
       </div>
-        
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
 
   </body>
 </html>
-
-
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
-
-
-
-
-
   </body>
 </html>

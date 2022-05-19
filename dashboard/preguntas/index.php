@@ -13,7 +13,20 @@
   <body>
 	<?php
 	$mysqli = include_once "../config/conexion.php";
-	$resultado = $mysqli->query("SELECT id_pregunta, id_encuesta, titulo, id_tipo_pregunta FROM preguntas ORDER BY id_encuesta");
+	$resultado = $mysqli->query("SELECT 
+																preguntas.id_pregunta, 
+																preguntas.id_encuesta, 
+																preguntas.titulo, 
+																preguntas.id_tipo_pregunta, 
+																tipo_pregunta.nombre
+															FROM 
+																preguntas 
+															INNER JOIN 
+																tipo_pregunta 
+															ON 
+																preguntas.id_tipo_pregunta = tipo_pregunta.id_tipo_pregunta
+															ORDER BY 
+																preguntas.id_encuesta");
 	$preguntas = $resultado->fetch_all(MYSQLI_ASSOC);
 	?>
 		<div class="wrapper d-flex align-items-stretch">
@@ -64,7 +77,7 @@
 				                    <th>Encuesta</th>
 				                    <th>Titulo</th>
 				                    <th>Tipo de pregunta</th>
-				                    <th colspan="2">Acciones</th>
+				                    <th colspan="3">Acciones</th>
 				                </tr>
 				            </thead>
 				            <tbody>
@@ -74,7 +87,7 @@
 				                        <td><?php echo $pregunta["id_pregunta"] ?></td>
 				                        <td><?php echo $pregunta["id_encuesta"] ?></td>
 				                        <td><?php echo $pregunta["titulo"] ?></td>
-				                        <td><?php echo $pregunta["id_tipo_pregunta"] ?></td>
+				                        <td><?php echo $pregunta["nombre"] ?></td>
 				                        
 				                        
 				                        <td>
@@ -82,6 +95,13 @@
 				                        </td>
 				                        <td>
 				                            <a href="delete.php?id=<?php echo $pregunta["id_pregunta"] ?>">Eliminar</a>
+				                        </td>
+				                        <td>
+				                        	<?php
+				                        		//As long as "Selección múltiple = 1", "Desplegable = 2", "Casilla de verificación = 3", "Texto = 4"
+				                        		if ($pregunta["id_tipo_pregunta"] == 1){?>
+				                        		<a href="../opciones/form.php?id_pregunta=<?php echo $pregunta["id_pregunta"] ?>">Agregar opciones</a>
+				                        	<?php }?>
 				                        </td>
 				                    </tr>
 				                <?php } ?>
