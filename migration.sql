@@ -43,3 +43,7 @@ ADD COLUMN `id_usuarios_encuestas` INT NULL AFTER `id_etapa`;
 ALTER TABLE `sistema_encuestas`.`encuestas` 
 CHANGE COLUMN `fecha_inicio` `fecha_inicio` DATE NULL DEFAULT NULL ,
 CHANGE COLUMN `fecha_final` `fecha_final` DATE NULL DEFAULT NULL ;
+
+
+ALTER TABLE `sistema_encuestas`.`resultados` 
+ADD COLUMN `id_resultado_encabezado` INT NULL AFTER `respuesta_texto`;
