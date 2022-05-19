@@ -7,6 +7,10 @@
 		    {
 		        $search = $_POST['search'];
 		        $resultado = $mysqli->query("SELECT
+		        								resultado_encabezado.id_encuesta,
+		        								resultado_encabezado.num_oficina,
+		        								resultado_encabezado.id_anios,
+		        								resultado_encabezado.id_etapa,
 												resultados.id_resultado,
 												resultados.id_opcion,
 												resultados.respuesta_texto

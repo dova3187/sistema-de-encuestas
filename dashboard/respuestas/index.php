@@ -84,7 +84,11 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Opcion</th>
+                            <th>Encuesta</th>
+                            <th>Número oficina</th>
+                            <th>Año</th>
+                            <th>Etapa</th>
+                            <th>Opcion Seleccionada</th>
                             <th>Respuesta</th>
                             <th>Acciones</th>
                         </tr>
@@ -95,6 +99,10 @@
                         	foreach ($respuestas as $respuesta) { ?>
                             <tr>
                                 <td><?php echo $respuesta["id_resultado"] ?></td>
+                                <td><?php echo $respuesta["id_encuesta"] ?></td>
+                                <td><?php echo $respuesta["num_oficina"] ?></td>
+                                <td><?php echo $respuesta["id_anios"] ?></td>
+                                <td><?php echo $respuesta["id_etapa"] ?></td>
                                 <td><?php echo $respuesta["id_opcion"] ?></td>
                                 <td><?php echo $respuesta["respuesta_texto"] ?></td>
 
