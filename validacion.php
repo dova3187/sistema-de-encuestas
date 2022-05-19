@@ -58,7 +58,7 @@
 				if ($row['id_tipo_usuario'] == '1') {
 					$_SESSION['id_usuario'] = $row['id_usuario'];
 					$_SESSION['u_usuario'] = $row['nombres'];
-					header("Location: administrador/indexconfi.php");
+					header("Location: menu/index.php");
 				} else {
 					$_SESSION['id_usuario'] = $row['id_usuario'];
 					$_SESSION['u_usuario'] = $row['nombres'];
