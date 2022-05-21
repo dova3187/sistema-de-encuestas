@@ -47,3 +47,9 @@ CHANGE COLUMN `fecha_final` `fecha_final` DATE NULL DEFAULT NULL ;
 
 ALTER TABLE `sistema_encuestas`.`resultados` 
 ADD COLUMN `id_resultado_encabezado` INT NULL AFTER `respuesta_texto`;
+
+ALTER TABLE `sistema_encuestas`.`usuarios` 
+CHANGE COLUMN `clave` `clave` VARCHAR(255) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NOT NULL ;
+
+INSERT INTO `sistema_encuestas`.`usuarios` (`id_usuario`, `clave`, `nombres`, `apellidos`, `email`, `id_tipo_usuario`) VALUES ('admin', '$2y$10$.nWNnjzSgIgcZJm2VHSnJOOod2K8Kl3IGmHOjVUI9Rz6FCJSGk93i', 'admin', 'admin', 'admin@admin.com', '1');
+

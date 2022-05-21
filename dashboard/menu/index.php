@@ -28,10 +28,9 @@
         <form class="form-inline my-2 my-lg-0" style="color: #fff">
         <?php   
         session_start();
-          if (isset($_SESSION['u_usuario'])) {
-            echo "Bienvenido " . $_SESSION['u_usuario'] . "\t";
-
-            echo "<a href='../cerrar_sesion.php' class='btn btn-danger' style='margin-left: 10px'>Cerrar Sesión</a>";
+          if (isset($_SESSION['nombres'])) {
+            echo "Bienvenido " . $_SESSION['nombres'] . "\t";
+            echo "<a href='../../login/logout.php' class='btn btn-danger' style='margin-left: 10px'>Cerrar Sesión</a>";
           } else {
             header("Location: ../index.php");
           }
