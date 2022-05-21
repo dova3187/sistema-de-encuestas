@@ -7,7 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
         
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/c7ad093c7c.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
@@ -36,16 +36,19 @@
                 <div class="p-4 pt-5">
                 <img src="../../imagenes/LogPoderJ.png" class="responsive" width="200"></br>
 
-            </br><h4>Configuración</h4>
+            </br><h4><i class="fa-solid fa-screwdriver-wrench"></i> Configuración</h4>
             <ul class="list-unstyled components mb-5">
               <li>
-                  <a href="../encuestas/">Encuestas</a>
-              </li>
-              <li class="active">
-              <a href="../preguntas/">Preguntas</a>
+                  <a href="../menu/"><i class="fa-solid fa-house"></i> Menú principal</a>
               </li>
               <li>
-              <a href="../respuestas/">Respuestas</a>
+                  <a href="../encuestas/"><i class="fa-solid fa-square-poll-horizontal"></i> Encuestas</a>
+              </li>
+              <li class="active">
+              <a href="../preguntas/"><i class="fa-solid fa-file-circle-question"></i> Preguntas</a>
+              </li>
+              <li>
+              <a href="../respuestas/"><i class="fa-solid fa-file-circle-check"></i> Respuestas</a>
               </li>
             </ul>
 

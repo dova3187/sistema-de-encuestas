@@ -7,7 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
         
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c7ad093c7c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
@@ -33,17 +33,21 @@
                 
                 <img src="../../imagenes/LogPoderJ.png" class="responsive" width="200"></br>
 
-            </br><h4>Datos</h4>
+            </br><h4><i class="fa-solid fa-chart-column"></i> Datos</h4>
+            
             <ul class="list-unstyled components mb-5">
               <li>
-                  <a href="../graficas/">Gráficas</a>
-              </li>
-              <li class="active">
-              <a href="../tablas/">Tablas</a>
+                  <a href="../menu/"><i class="fa-solid fa-house"></i> Menú principal</a>
               </li>
               <li>
-              <a href="../indicadores/">Indicadores</a>
+                  <a href="../graficas/"><i class="fa-solid fa-chart-pie"></i> Gráficas</a>
               </li>
+              <li class="active">
+              <a href="../tablas/"><i class="fa-solid fa-table"></i> Tablas</a>
+              </li>
+              <!--<li>
+              <a href="../indicadores/">Indicadores</a>
+              </li>-->
             </ul>
 
             <div class="footer">

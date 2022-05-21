@@ -38,17 +38,21 @@
 		  		
 		  		<img src="../../imagenes/LogPoderJ.png" class="responsive" width="200"></br>
 
-		  	</br><h4>Datos</h4>
+		  	</br><h4><i class="fa-solid fa-chart-column"></i> Datos</h4>
+            
 	        <ul class="list-unstyled components mb-5">
+              <li>
+                  <a href="../menu/"><i class="fa-solid fa-house"></i> Menú principal</a>
+              </li>
               <li class="active">
-                  <a href="../graficas/">Gráficas</a>
+                  <a href="../graficas/"><i class="fa-solid fa-chart-pie"></i> Gráficas</a>
               </li>
               <li>
-              <a href="../tablas/">Tablas</a>
+              <a href="../tablas/"><i class="fa-solid fa-table"></i> Tablas</a>
               </li>
-              <li>
+              <!--<li>
               <a href="../indicadores/">Indicadores</a>
-              </li>
+              </li>-->
 	        </ul>
 
 	        <div class="footer">
