@@ -103,7 +103,6 @@
                 </div>
                     <div class="form-group">
                         <button class="btn btn-success" name="save">Buscar</button> 
-                        <a class="btn btn-warning my-2" href="../menu">Menú principal</a>
                     </div>
                 </form>
             </div>
