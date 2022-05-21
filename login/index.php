@@ -11,26 +11,36 @@
 	
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/application.css">
+	<script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
 
 	</head>
 	<body>
 
 <?php
- 
-include('../dashboard/config/conexion.php');
 session_start();
+include('../dashboard/config/conexion.php');
+include('../dashboard/config/recaptchalib.php');
+ $secret = "6LfB4LwfAAAAAIfGullid923Kt6ahI_r8qmQ2Il-";
+ $response = null;
+ // Verificamos la clave secreta
+ $reCaptcha = new ReCaptcha($secret);
+ if (isset($_POST["g-recaptcha-response"]) && $_POST["g-recaptcha-response"]) {
+     $response = $reCaptcha->verifyResponse(
+     $_SERVER["REMOTE_ADDR"],
+     $_POST["g-recaptcha-response"]
+     );
+  }
+
  
-if (isset($_POST['login'])) {
- 
+if (isset($_POST['login']) && $response != null && $response->success) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
 
 		$query  = $mysqli->query("SELECT id_usuario, clave, nombres FROM usuarios WHERE id_usuario='$username'");
 		$result = $query->fetch_all(MYSQLI_ASSOC);
 	 
 	    if (!$result) {
-	        echo '<p class="error">Username password combination is wrong!</p>';
+	        echo '<p class="error">Error, datos incorrectos.</p>';
 	    } else {
 	        if (password_verify($password, $result[0]['clave'])) {
 	            $_SESSION['user_id'] = $result[0]['id_usuario'];
@@ -43,6 +53,7 @@ if (isset($_POST['login'])) {
 	        }
 	    }
 }
+
  
 ?>
 
@@ -70,6 +81,10 @@ if (isset($_POST['login'])) {
 		              <label class="form-control-placeholder" for="password">Contraseña</label>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 		            </div>
+		            	<div class="form-group btn">
+		            	<div class="g-recaptcha" data-sitekey="6LfB4LwfAAAAAKOuCqL-8Wl4t9N2-ONgzHSXre27"></div>
+		            	</div>
+
 		            <div class="form-group">
 		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3" name="login" value="login">Iniciar sesión</button>
 		            </div>
