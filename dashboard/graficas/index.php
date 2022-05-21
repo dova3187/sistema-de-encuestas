@@ -128,7 +128,7 @@ const myChart = new Chart(ctx, {
     data: {
         labels: ['Inicial', 'Complementaria'],
         datasets: [{
-            label: '# of Votes',
+            label: '#',
             data: [inicial, complementaria],
             backgroundColor: [
                 'rgba(54, 162, 235)',
