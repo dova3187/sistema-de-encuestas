@@ -1,4 +1,4 @@
-<?php header("Location: login/index.php"); ?>
+<?php header("Location: login/"); ?>
 <?php
 
 $servername = "localhost";
