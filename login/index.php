@@ -88,7 +88,9 @@ if (isset($_POST['login']) && $response != null && $response->success) {
 		            <div class="form-group">
 		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3" name="login" value="login">Iniciar sesión</button>
 		            </div>
-
+						<div class="form-group">
+						<a href="../invitado/index.php" class="form-control btn btn-primary rounded submit px-3" name="invitado" value="invitado">Invitado</a>
+					</div>
 		          </form>
 		          
 		        </div>

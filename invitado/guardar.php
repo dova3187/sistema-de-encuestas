@@ -18,22 +18,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <title>Responder</title>
 
 </head>
 <body>
  	<div class="container text-center card" style="background-color:#557982; margin-top:200px;">
     <div>
-        <img src="imagenes/LogPoderJ.png" height="80" width="270" style="margin-top:50px;">
+        <img src="../imagenes/LogPoderJ.png" height="80" width="270" style="margin-top:50px;">
     </div>
 	<center>
 		<div style="margin-top: 50px"></div>
 		<?php
 
 		$id_usuario = "invitado";
-		$id_encuesta = 1;
+		$id_encuesta = $id_encuesta;
 		$oficina = $_SESSION["oficina"];
 		$periodo = $_SESSION["periodo"];
 		$etapa = $_SESSION["etapa"];

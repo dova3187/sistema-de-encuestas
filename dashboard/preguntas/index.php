@@ -44,7 +44,7 @@
             </br><h4><i class="fa-solid fa-screwdriver-wrench"></i> Configuración</h4>
             <ul class="list-unstyled components mb-5">
               <li>
-                  <a href="../menu/"><i class="fa-solid fa-house"></i> Menú principal</a>
+                  <a href="../menu/"><i class="fa-solid fa-house"></i> xMenú principal</a>
               </li>
               <li>
                   <a href="../encuestas/"><i class="fa-solid fa-square-poll-horizontal"></i> Encuestas</a>

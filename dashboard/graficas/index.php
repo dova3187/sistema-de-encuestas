@@ -135,8 +135,8 @@ const myChart = new Chart(ctx, {
             label: '#',
             data: [inicial, complementaria],
             backgroundColor: [
-                'rgba(54, 162, 235)',
-                'rgba(204, 68, 0)'
+                'rgba(186, 223, 232)',
+                'rgba(127, 145, 116)'
             ],
             hoverOffset: 4
         }]

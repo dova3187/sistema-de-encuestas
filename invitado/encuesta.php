@@ -91,19 +91,19 @@ echo $data; */
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 
 
   <title>Responder</title>
 
 </head>
-<body>
+<body style="background:#557982">
   
- 	<div class="container text-center card" style="background-color:#557982; margin-top:200px;">
+ 	<div class="container text-center card" style="background-color:#144653; margin-top:200px;">
     <div>
-        <img src="imagenes/LogPoderJ.png" height="80" width="270" style="margin-top:50px;">
+        <img src="../imagenes/LogPoderJ.png" height="80" width="270" style="margin-top:50px;">
     </div>
  		<hr /> 
  		<h1><?php echo $row3['titulo'] ?></h1>
@@ -156,11 +156,11 @@ echo $data; */
 		 	</div>
 		<br/>
 		<input type="hidden" name="id_encuesta" value="<?php echo $id_encuesta ?>">
-		<input class="btn btn-primary" type="submit" value="Responder">
+		<input class="btn btn-primary" type="submit" value="Responder" style="background-color: #BADFE8">
 		</form>
 
 
-		<a href="index.php" class="btn btn-primary">Regresar</a>
+		<a href="index.php" class="btn btn-primary" style="background-color: #BADFE8">Regresar</a>
  	</div>
 
   <!-- Optional JavaScript -->

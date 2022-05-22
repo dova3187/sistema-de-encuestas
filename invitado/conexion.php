@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "php";
-$password = "password";
-$dbname = "sistema_encuestas";
+$username = "root";
+$password = "";
+$dbname = "encuesta";
 
 // Creamos la conexión
 $con = new mysqli($servername, $username, $password, $dbname);
