@@ -91,7 +91,7 @@
                       </select>
                 </div>
                 <div class="form-group">
-                    <label for="nombre">Titulo</label>
+                    <label for="nombre">Pregunta</label>
                     <input placeholder="Nombre" class="form-control" type="text" name="titulo" id="titulo" required>
                 </div>
 

@@ -92,7 +92,7 @@
 		 ?>
 
 		<br/><br/>
-		<a class="btn btn-primary" href="index.php">Regresar</a><br/>
+		<a class="btn btn-primary" href="index.php" style="background-color: #BADFE8">Regresar</a><br/>
 	</center>
 		 	</div>
 		<br/>

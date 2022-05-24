@@ -55,7 +55,7 @@
         <div class="col-12">
             <form action="save.php" method="POST">
                 <div class="form-group">
-                    <label for="nombre">Titulo</label>
+                    <label for="nombre">Pregunta</label>
                     <input placeholder="Nombre" class="form-control" type="text" name="titulo" id="titulo" required>
                 </div>
                 <div class="form-group">

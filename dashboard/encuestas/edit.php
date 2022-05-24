@@ -70,7 +70,7 @@
                 <form action="update.php" method="POST">
                     <input type="hidden" name="id_encuesta" value="<?php echo $encuesta["id_encuesta"] ?>">
                     <div class="form-group">
-                        <label for="nombre">Titulo</label>
+                        <label for="nombre">Pregunta</label>
                         <input value="<?php echo $encuesta["titulo"] ?>" placeholder="Titulo" class="form-control" type="text" name="titulo" id="titulo" required>
                     </div>
                     <div class="form-group">

@@ -77,7 +77,7 @@
 				                <tr>
 				                    <th>ID</th>
 				                    <th>Encuesta</th>
-				                    <th>Titulo</th>
+				                    <th>Pregunta</th>
 				                    <th>Tipo de pregunta</th>
 				                    <th colspan="3">Acciones</th>
 				                </tr>
